@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.css">
+<style>
+  /* pin frame to viewport corner: headless capture crops the top-left 160×600,
+     and fixed positioning is immune to body-layout centering quirks */
+  html, body { display: block; }
+  .frame { --w: 160px; --h: 600px; position: fixed; top: 0; left: 0; margin: 0; }
+  .logo { position: absolute; top: 24px; left: 50%; transform: translateX(-50%); font-size: 11.5px; flex-direction: column; gap: 8px; }
+  .logo .mark i { width: .34em; height: .34em; }
+
+  .px.a { width: 84px; height: 84px; left: 50%; transform: translateX(-50%); top: 84px;
+    grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 6px; }
+  .px.a i { border-radius: 4px; }
+  .px.a i:nth-child(1) { background: var(--sunshine); }
+  .px.a i:nth-child(2) { background: var(--lime); }
+  .px.a i:nth-child(3) { background: var(--mint); }
+  .px.a i:nth-child(5) { background: var(--purple); }
+  .px.a i:nth-child(6) { background: var(--sunshine); }
+  .px.a i:nth-child(8) { background: var(--mint); }
+  .px.a i:nth-child(9) { background: var(--lime); }
+
+  .eyebrow { position: absolute; top: 196px; left: 0; right: 0; text-align: center; font-size: 7px; }
+  .display { position: absolute; top: 216px; left: 14px; font-size: 27px; max-width: 134px; }
+  .sub { position: absolute; top: 330px; left: 16px; font-size: 10.5px; line-height: 1.5; color: var(--ink-soft); max-width: 128px; }
+
+  .sticker { position: absolute; top: 408px; left: 50%; transform: translateX(-50%) rotate(-8deg);
+    width: 96px; height: 96px; font-size: 7.5px; gap: 2px; }
+  .sticker .big { font-size: 22px; }
+
+  .btn { position: absolute; left: 12px; right: 12px; bottom: 22px; font-size: 9px; padding: 13px 6px; justify-content: center; box-shadow: 0 4px 0 var(--grape-dark); }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="logo"><span class="mark"><i></i><i></i><i></i><i></i></span>Loop Camp</div>
+    <div class="px a"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="eyebrow">Summer of Code · 8–14</div>
+    <h1 class="display">They build <span class="accent">the game.</span></h1>
+    <p class="sub">6 weeks of Scratch &amp; Python, taught like play.</p>
+    <div class="sticker"><span>Free</span><span class="big">Trial</span><span>class</span></div>
+    <div class="btn">Save a seat</div>
+  </div>
+</body>
+</html>

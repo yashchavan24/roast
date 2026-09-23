@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .frame { --w: 1080px; --h: 1080px; }
+
+  .logo { position: absolute; top: 64px; left: 72px; font-size: 34px; }
+  .handle { right: 72px; bottom: 64px; font-size: 19px; }
+
+  /* deco pixel clusters */
+  .px.a { width: 210px; height: 210px; right: 70px; top: 150px;
+    grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); }
+  .px.a i:nth-child(1) { background: var(--sunshine); }
+  .px.a i:nth-child(3) { background: var(--mint); }
+  .px.a i:nth-child(5) { background: var(--purple); }
+  .px.a i:nth-child(7) { background: var(--lime); }
+  .px.a i:nth-child(9) { background: var(--sunshine); }
+  .px.b { width: 120px; height: 60px; right: 330px; top: 168px;
+    grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(1, 1fr); }
+  .px.b i:nth-child(1) { background: var(--lime); }
+  .px.b i:nth-child(2) { background: var(--mint); }
+
+  .eyebrow { position: absolute; top: 236px; left: 72px; font-size: 23px; }
+  .display {
+    position: absolute; top: 296px; left: 72px;
+    font-size: 118px; max-width: 940px;
+  }
+  .sub {
+    position: absolute; left: 72px; top: 712px;
+    font-size: 27px; line-height: 1.5; color: var(--ink-soft); max-width: 640px;
+  }
+  .chips { position: absolute; left: 72px; bottom: 180px; display: flex; gap: 16px; }
+  .chip { font-size: 20px; padding: 16px 26px; }
+
+  .sticker {
+    position: absolute; right: 84px; bottom: 260px;
+    width: 210px; height: 210px; font-size: 15px;
+  }
+  .btn { position: absolute; left: 72px; bottom: 72px; font-size: 24px; padding: 26px 42px; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="gridpaper"></div>
+
+    <div class="logo"><span class="mark"><i></i><i></i><i></i><i></i></span>Loop Camp</div>
+    <div class="px a"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="px b"><i></i><i></i></div>
+
+    <div class="eyebrow">Summer of Code · Ages 8–14</div>
+    <h1 class="display">This summer,<br>they <span class="hl">build</span><br>the game.</h1>
+    <p class="sub">Six weeks of Scratch, Python and game design — taught like play, ending in a real game they ship to the family group chat.</p>
+
+    <div class="chips">
+      <span class="chip"> Scratch</span>
+      <span class="chip"> Python</span>
+      <span class="chip"> Game jams</span>
+    </div>
+
+    <div class="sticker"><span>Only</span><span class="big">20</span><span>seats</span></div>
+    <div class="btn">Save my seat →</div>
+    <div class="handle">@loopcamp</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .frame { --w: 1200px; --h: 1560px; }
+
+  .logo { position: absolute; top: 70px; left: 80px; font-size: 40px; }
+  .eyebrow.h { position: absolute; top: 86px; right: 80px; font-size: 15px; }
+
+  h1.display { position: absolute; top: 170px; left: 80px; font-size: 88px; }
+  .lede {
+    position: absolute; top: 300px; left: 80px;
+    font-size: 22px; line-height: 1.55; color: var(--ink-soft); max-width: 820px;
+  }
+
+  .panel {
+    position: absolute; left: 80px; right: 80px;
+    background: var(--paper); border: 3px solid var(--ink);
+    border-radius: 26px; padding: 44px;
+    box-shadow: 10px 10px 0 var(--cloud);
+  }
+  .panel h3 {
+    font-family: var(--display); font-size: 17px; font-weight: 700;
+    letter-spacing: .28em; text-transform: uppercase; color: var(--purple);
+    margin-bottom: 30px;
+  }
+
+  /* Logo lockup panel */
+  .p1 { top: 480px; height: 330px; }
+  .lockup { display: flex; align-items: center; gap: 36px; }
+  .lockup .mark {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+  }
+  .lockup .mark i { width: 44px; height: 44px; border-radius: 8px; background: var(--purple); }
+  .lockup .mark i:nth-child(2) { background: var(--lime); }
+  .lockup .mark i:nth-child(3) { background: var(--sunshine); }
+  .lockup .mark i:nth-child(4) { background: var(--mint); }
+  .lockup b { font-family: var(--display); font-size: 96px; letter-spacing: -.03em; color: var(--ink); }
+  .lockup-note { margin-top: 34px; font-size: 18px; color: var(--ink-soft); line-height: 1.6; }
+  .alt-lockup {
+    position: absolute; right: 44px; top: 44px;
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+    background: var(--purple); border-radius: 20px; padding: 26px 30px;
+  }
+  .alt-lockup .mark { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; }
+  .alt-lockup .mark i { width: 20px; height: 20px; border-radius: 4px; background: var(--paper); }
+  .alt-lockup .mark i:nth-child(2) { background: var(--lime); }
+  .alt-lockup .mark i:nth-child(3) { background: var(--sunshine); }
+  .alt-lockup .mark i:nth-child(4) { background: var(--mint); }
+  .alt-lockup b { font-family: var(--display); font-size: 30px; color: var(--paper); }
+
+  /* Palette panel */
+  .p2 { top: 850px; height: 300px; }
+  .swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+  .swatch .chip-color { height: 96px; border-radius: 14px; border: 2.5px solid var(--ink); }
+  .swatch small {
+    display: block; margin-top: 10px; font-size: 12.5px; font-weight: 700;
+    letter-spacing: .08em; color: var(--ink); text-transform: uppercase;
+  }
+  .swatch tiny { display: block; font-size: 11px; color: var(--ink-soft); font-family: ui-monospace, Consolas, monospace; }
+
+  /* Type panel */
+  .p3 { top: 1190px; height: 280px; }
+  .type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .type-grid .big-specimen {
+    font-family: var(--display); font-weight: 700; font-size: 58px; letter-spacing: -.03em;
+    line-height: 1.05; color: var(--ink);
+  }
+  .type-grid .body-specimen { font-size: 17px; line-height: 1.7; color: var(--ink-soft); }
+  .type-label { font-size: 12px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: var(--mint); margin-bottom: 12px; }
+
+  .footer-line {
+    position: absolute; bottom: 40px; left: 80px; right: 80px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 14px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="gridpaper"></div>
+
+    <div class="logo"><span class="mark"><i></i><i></i><i></i><i></i></span>Loop Camp</div>
+    <div class="eyebrow h">Project 2 · Brand Identity</div>
+
+    <h1 class="display">Loop Camp<span class="accent">.</span></h1>
+    <p class="lede">A summer coding camp for kids aged 8–14. Identity built on one idea: <b>learning to code feels like a game</b> — so the brand borrows the visual language of pixel games, sticker sheets, and notebook doodles.</p>
+
+    <div class="panel p1">
+      <div class="alt-lockup"><span class="mark"><i></i><i></i><i></i><i></i></span><b>Loop Camp</b></div>
+      <h3>Logo &amp; construction</h3>
+      <div class="lockup">
+        <span class="mark"><i></i><i></i><i></i><i></i></span>
+        <b>Loop Camp</b>
+      </div>
+      <p class="lockup-note">The mark is a 2×2 pixel cluster — one square per discipline: purple = code, lime = games, sunshine = builds, mint = teamwork. It scales from favicon to banner without redrawing. Inverse lockup (right) for purple surfaces.</p>
+    </div>
+
+    <div class="panel p2">
+      <h3>Palette — bright, candy-clean, accessible</h3>
+      <div class="swatches">
+        <div class="swatch"><div class="chip-color" style="background:#6c3ce0"></div><small>Grape</small><tiny>#6C3CE0</tiny></div>
+        <div class="swatch"><div class="chip-color" style="background:#b7f04c"></div><small>Lime</small><tiny>#B7F04C</tiny></div>
+        <div class="swatch"><div class="chip-color" style="background:#3edbb2"></div><small>Mint</small><tiny>#3EDBB2</tiny></div>
+        <div class="swatch"><div class="chip-color" style="background:#ffd23e"></div><small>Sunshine</small><tiny>#FFD23E</tiny></div>
+        <div class="swatch"><div class="chip-color" style="background:#1e1a33"></div><small>Ink</small><tiny>#1E1A33</tiny></div>
+        <div class="swatch"><div class="chip-color" style="background:#fffdf7"></div><small>Paper</small><tiny>#FFFDF7</tiny></div>
+      </div>
+    </div>
+
+    <div class="panel p3">
+      <h3>Type &amp; voice</h3>
+      <div class="type-grid">
+        <div>
+          <div class="type-label">Display — Space Grotesk</div>
+          <div class="big-specimen">Build. Break.<br>Loop.</div>
+        </div>
+        <div>
+          <div class="type-label">Body — Inter · Voice: playful, never childish</div>
+          <div class="body-specimen">Copy talks to kids like future engineers, not babies. Short sentences. Verbs first. One joke per layout, maximum. Buttons say what they do: <b>“Save my seat”</b> beats “Submit”.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-line">
+      <span>Loop Camp · Summer of Code</span>
+      <span>Identity system · 1 of 1</span>
+    </div>
+  </div>
+</body>
+</html>

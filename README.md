@@ -1,6 +1,17 @@
-# Roast Theory® — Campaign Design Portfolio
+# Campaign Design Portfolio — Two Brands, One Process
 
-A 3-project design portfolio for a **graphic designer (ad-tech / digital marketing) application**. One fictional D2C coffee brand — **Roast Theory** — and one campaign idea — **"Midnight Roast"** — carried across every format so the whole set reads as a single brand thinking like an advertiser.
+A design portfolio for a **graphic designer (ad-tech / digital marketing) application**: two deliberately opposite brands, each taken brief → identity → multi-format campaign → case study.
+
+| | Project 1 · **Roast Theory®** | Project 2 · **Loop Camp** |
+|---|---|---|
+| Brand | D2C specialty coffee | Kids coding camp (ages 8–14) |
+| Register | Dark, premium, serif, nocturnal | Bright, playful, geometric, daytime |
+| Audiences | One voice (the 1 a.m. buyer) | Dual voice (parent buys, kid chooses) |
+| Motif | One crema moon | Pixel-cluster squares |
+| Type | Fraunces + Inter | Space Grotesk + Inter |
+| Job it proves | Campaign system thinking, IAB craft, restraint | Identity design, range, energy with discipline |
+
+> Both brands are fictional by design: what's real is the process — brief, insight, rejected directions, fixed role systems, exact-size output across every channel.
 
 > The brand is fictional by design: it demonstrates brief-to-output thinking end-to-end. The process and constraints are real; the client isn't.
 
@@ -38,11 +49,25 @@ A 3-project design portfolio for a **graphic designer (ad-tech / digital marketi
 
 *Resizing is the actual daily work of display design. Same headline, same moon, same CTA — only the layout logic changes per real estate. The 160×600 forced the message down to five words; if a concept survives the smallest unit, it survives everywhere.*
 
-## 3 · Brief-to-output case study
+## 2 · Loop Camp — "Summer of Code" (Project 2)
+
+**Brief:** *"We run a summer coding camp for kids aged 8–14. Our buyer is the parent, but our user is the kid. Fill 20 seats per batch for June. Make it feel fun without feeling childish."*
+
+The winning platform — *learning to code feels like a game* — borrows pixel-game energy for kids while a strict grid, fixed color roles (grape acts, lime highlights, sunshine stickers) and restrained copy keep parents trusting. Live pages: [identity](loop-camp/identity.html) · [IG post](loop-camp/post-hero.html) · [story](loop-camp/story.html) · [banners](loop-camp/300x250.html) · [case study](loop-camp/case-study.html)
+
+| IG Post · 1080×1080 | IG Story · 1080×1920 | Identity System |
+|:---:|:---:|:---:|
+| ![Loop Camp post](loop-camp/exports/ig-post-1080x1080.png) | ![Loop Camp story](loop-camp/exports/ig-story-1080x1920.png) | ![Loop Camp identity](loop-camp/exports/identity-sheet.png) |
+
+| 300×250 | 728×90 | 160×600 |
+|:---:|:---:|:---:|
+| ![LC 300x250](loop-camp/exports/banner-300x250.png) | ![LC 728x90](loop-camp/exports/banner-728x90.png) | ![LC 160x600](loop-camp/exports/banner-160x600.png) |
+
+## 3 · Brief-to-output case studies
 
 Read the full case study → **[case-study.html](case-study.html)** (also exported as [`roast-theory-case-study.pdf`](exports/roast-theory-case-study.pdf))
 
-It contains the client brief, the insight, **two rejected directions with the reasons they died**, the winning design system, and every final output — demonstrating ownership of the full pipeline from brief to final output.
+Each campaign ships with its own case study — the client brief, the insight, **the directions that were killed and why**, the winning design system, and every final output. Read them here: [Roast Theory](case-study.html) · [Loop Camp](loop-camp/case-study.html)
 
 ---
 
@@ -54,7 +79,8 @@ It contains the client brief, the insight, **two rejected directions with the re
 | `story/` | IG story, 1080×1920 |
 | `square/` | Static square post, 1080×1080 |
 | `banners/` | 300×250, 728×90, 160×600 IAB units + gallery |
-| `case-study.html` | Brief-to-output case study page |
+| `case-study.html` | Roast Theory case study page |
+| `loop-camp/` | Project 2: identity sheet, IG post + story, 3 banners, case study, exports |
 | `exports/` | All 9 PNGs at exact pixel sizes + case-study PDF |
 | `brand.css` | Shared brand system (palette, type, motifs) |
 | `index.html` | Gallery linking every project |

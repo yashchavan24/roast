@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .frame { --w: 1080px; --h: 1920px; }
+  .frame.inverse { background: var(--purple); }
+
+  .bars { position: absolute; top: 54px; left: 56px; right: 56px; display: flex; gap: 10px; }
+  .bars span { height: 6px; border-radius: 6px; background: rgba(255,253,247,.3); flex: 1; }
+  .bars span.on { background: var(--sunshine); }
+
+  .logo { position: absolute; top: 108px; left: 72px; font-size: 38px; color: var(--paper); }
+  .logo .mark i { background: var(--paper); }
+  .logo .mark i:nth-child(2) { background: var(--lime); }
+  .logo .mark i:nth-child(3) { background: var(--sunshine); }
+  .logo .mark i:nth-child(4) { background: var(--mint); }
+
+  /* code window card */
+  .code {
+    position: absolute; top: 240px; left: 72px; right: 72px;
+    background: var(--ink); border-radius: 24px; padding: 34px 38px;
+    box-shadow: 0 14px 0 rgba(0,0,0,.22);
+  }
+  .code .bar { display: flex; gap: 12px; margin-bottom: 26px; }
+  .code .bar i { width: 18px; height: 18px; border-radius: 50%; }
+  .code pre {
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    font-size: 30px; line-height: 1.75; color: #e8e4ff; white-space: pre;
+  }
+  .code .k { color: var(--sunshine); }
+  .code .s { color: var(--mint); }
+  .code .blink { color: var(--lime); }
+
+  .eyebrow { position: absolute; top: 700px; left: 72px; font-size: 25px; color: var(--sunshine); }
+  .display { position: absolute; top: 770px; left: 72px; font-size: 116px; max-width: 920px; }
+  .sub {
+    position: absolute; top: 1180px; left: 72px;
+    font-size: 29px; line-height: 1.55; color: rgba(255,253,247,.85); max-width: 800px;
+  }
+
+  .info-row { position: absolute; top: 1400px; left: 72px; display: flex; gap: 14px; }
+  .chip { background: rgba(255,253,247,.14); color: var(--paper); font-size: 19px; padding: 16px 22px; }
+
+  .sticker {
+    position: absolute; top: 1400px; right: 90px;
+    width: 200px; height: 200px; font-size: 14px;
+  }
+
+  .btn { position: absolute; left: 72px; top: 1660px; font-size: 26px; padding: 30px 48px; background: var(--sunshine); color: var(--ink); box-shadow: 0 8px 0 rgba(0,0,0,.25); }
+  .tap { position: absolute; right: 84px; top: 1674px; font-size: 21px; letter-spacing: .28em; text-transform: uppercase; color: rgba(255,253,247,.8); font-weight: 700; }
+  .handle { right: 72px; bottom: 54px; font-size: 19px; color: rgba(255,253,247,.75); }
+</style>
+</head>
+<body>
+  <div class="frame inverse">
+    <div class="bars"><span class="on"></span><span class="on"></span><span></span><span></span></div>
+
+    <div class="logo"><span class="mark"><i></i><i></i><i></i><i></i></span>Loop Camp</div>
+
+    <div class="code">
+      <div class="bar"><i style="background:#ff6b6b"></i><i style="background:#ffd23e"></i><i style="background:#3edbb2"></i></div>
+      <pre><span class="k">while</span> summer:
+    kid.play()
+    kid.<span class="s">learn_python</span>()
+    <span class="blink"># same thing, actually</span></pre>
+    </div>
+
+    <div class="eyebrow">Summer of Code · Ages 8–14</div>
+    <h1 class="display">Screen time you'll actually <span style="color:var(--sunshine)">brag about.</span></h1>
+    <p class="sub">90 minutes a day, Mon–Fri. They arrive a player and leave a maker — first game shipped by week two. No experience needed, curiosity mandatory.</p>
+
+    <div class="info-row">
+      <span class="chip">Jun 2 – Jul 11</span>
+      <span class="chip">Live online</span>
+      <span class="chip">Free trial</span>
+    </div>
+    <div class="sticker"><span>Batch of</span><span class="big">20</span><span>kids</span></div>
+
+    <div class="btn">Book the free trial →</div>
+    <div class="tap">↑ Swipe up</div>
+    <div class="handle">@loopcamp</div>
+  </div>
+</body>
+</html>

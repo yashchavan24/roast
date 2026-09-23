@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .frame { --w: 300px; --h: 250px; }
+  .logo { position: absolute; top: 18px; left: 20px; font-size: 14px; }
+  .eyebrow { position: absolute; top: 44px; left: 20px; font-size: 8.5px; }
+  .display { position: absolute; top: 66px; left: 20px; font-size: 34px; max-width: 190px; }
+  .px.a { width: 66px; height: 66px; right: 16px; top: 42px;
+    grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 5px; }
+  .px.a i { border-radius: 4px; }
+  .px.a i:nth-child(1) { background: var(--sunshine); }
+  .px.a i:nth-child(2) { background: var(--mint); }
+  .px.a i:nth-child(4) { background: var(--lime); }
+  .sub { position: absolute; top: 156px; left: 20px; font-size: 12px; color: var(--ink-soft); max-width: 210px; line-height: 1.45; }
+  .btn { position: absolute; left: 20px; right: 20px; bottom: 18px; font-size: 11px; padding: 12px 14px; justify-content: center; box-shadow: 0 4px 0 var(--grape-dark); }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="logo"><span class="mark"><i></i><i></i><i></i><i></i></span>Loop Camp</div>
+    <div class="eyebrow">Summer of Code · 8–14</div>
+    <h1 class="display">They build <span class="accent">the game.</span></h1>
+    <div class="px a"><i></i><i></i><i></i><i></i></div>
+    <p class="sub">6 weeks of Scratch &amp; Python. First game shipped by week two.</p>
+    <div class="btn">Free trial class →</div>
+  </div>
+</body>
+</html>
