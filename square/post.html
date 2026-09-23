@@ -42,7 +42,14 @@
     font-size: 26px; line-height: 1.5; color: var(--latte); max-width: 380px; z-index: 3;
   }
   .footer-line {
-    position: absolute; left: 72px; bottom: 80px;
+    position: absolute; left: 72px; bottom: 128px;
+    font-size: 22px; letter-spacing: .28em; text-transform: uppercase;
+    color: var(--burnt); font-weight: 700; z-index: 3;
+  }
+  /* URL on its own line, parked fully in the dark zone — amber on the
+     pale moon dropped to ~1.6:1 contrast, so the tail used to vanish */
+  .site {
+    position: absolute; left: 72px; bottom: 82px;
     font-size: 22px; letter-spacing: .28em; text-transform: uppercase;
     color: var(--burnt); font-weight: 700; z-index: 3;
   }
@@ -66,7 +73,8 @@
 
     <div class="badge"><span>Limited</span><span class="big">500</span><span>Bags</span></div>
     <p class="sub">A limited-batch dark roast for the 1 a.m. crowd. Zero apologies.</p>
-    <div class="footer-line">Drops tonight → roasttheory.coffee</div>
+    <div class="footer-line">Drops tonight →</div>
+    <div class="site">roasttheory.coffee</div>
     <div class="handle">@roasttheory</div>
   </div>
 </body>
