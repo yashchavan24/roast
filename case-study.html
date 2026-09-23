@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Roast Theory — Case Study: Brief to Output</title>
+<style>
+  :root {
+    --ink: #16130f; --night: #0a0908; --crema: #f4ead8;
+    --latte: #d9b98c; --burnt: #c96f3b; --muted: #8a6a4f; --line: #2a211a;
+    --display: "Fraunces", Georgia, serif; --body: "Inter", Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--night); color: var(--crema); font-family: var(--body); }
+  .page { max-width: 1060px; margin: 0 auto; padding: 64px 40px 96px; }
+  .kicker { color: var(--burnt); letter-spacing: .34em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin-bottom: 18px; }
+  h1 { font-family: var(--display); font-size: 52px; line-height: 1.05; font-weight: 600; letter-spacing: -.02em; max-width: 760px; }
+  h2 { font-family: var(--display); font-size: 30px; font-weight: 600; margin: 0 0 18px; }
+  h3 { font-size: 13px; letter-spacing: .3em; text-transform: uppercase; color: var(--latte); margin: 0 0 14px; font-weight: 700; }
+  section { margin-top: 72px; }
+  p { line-height: 1.7; color: #cfc2ab; font-size: 15.5px; max-width: 740px; }
+  .brief {
+    margin-top: 40px; border: 1px solid var(--line); background: var(--ink);
+    padding: 34px 38px; border-left: 4px solid var(--burnt);
+  }
+  .brief em { font-family: var(--display); font-style: italic; font-size: 24px; color: var(--crema); line-height: 1.4; display: block; }
+  .brief small { display: block; margin-top: 14px; color: var(--muted); letter-spacing: .2em; text-transform: uppercase; font-size: 11px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .card { border: 1px solid var(--line); background: var(--ink); padding: 30px; }
+  .tag {
+    display: inline-block; font-size: 10px; letter-spacing: .28em; text-transform: uppercase;
+    color: var(--muted); border: 1px solid var(--line); padding: 6px 12px; border-radius: 999px; margin-bottom: 16px;
+  }
+  .card h4 { font-family: var(--display); font-size: 24px; font-weight: 600; margin-bottom: 10px; }
+  .why { margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--line); }
+  .why b { color: var(--burnt); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; }
+  .why span { display: block; margin-top: 6px; color: #cfc2ab; font-size: 14px; line-height: 1.65; }
+  .final { border: 1px solid #4a3a26; background: linear-gradient(160deg, #1d1812, #16130f); padding: 34px; }
+  .final h4 { font-family: var(--display); font-size: 30px; font-weight: 600; margin-bottom: 12px; }
+  .swatches { display: flex; gap: 14px; margin: 26px 0 30px; }
+  .sw { flex: 1; height: 74px; border-radius: 8px; position: relative; border: 1px solid rgba(244,234,216,.08); }
+  .sw span { position: absolute; left: 10px; bottom: 8px; font-size: 10px; letter-spacing: .14em; color: rgba(244,234,216,.85); font-weight: 600; }
+  .grid-outputs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 26px; }
+  .shot { border: 1px solid var(--line); overflow: hidden; background: var(--ink); }
+  .shot .fit { overflow: hidden; display: block; }
+  .shot figcaption { padding: 12px 14px; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+  ul.points { margin: 18px 0 0 0; padding-left: 20px; }
+  ul.points li { line-height: 1.8; color: #cfc2ab; font-size: 15px; }
+  a.back { color: var(--latte); text-decoration: none; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <a class="back" href="index.html">← All projects</a>
+
+    <section style="margin-top:28px">
+      <div class="kicker">Project 3 · Brief-to-Output Case Study</div>
+      <h1>From one-line brief to a full campaign system.</h1>
+      <div class="brief">
+        <em>"We're a small-batch D2C coffee brand. Launch our limited-edition dark roast to people who buy coffee at midnight. Playful, but premium. Make it feel scarce."</em>
+        <small>Fictional client brief · Roast Theory® · deliverables: social + display</small>
+      </div>
+    </section>
+
+    <section>
+      <h2>The insight I chose to build on</h2>
+      <p>Midnight coffee buyers aren't buying caffeine — they're buying <b>permission to stay up</b>. So instead of advertising the coffee, the campaign advertises the moment: 1 a.m., quiet, yours. That gave me the creative platform — <b>"For the 1 a.m. crowd"</b> — and a visual metaphor the whole system hangs on: a <b>crema-colored full moon</b> that reads as moon, coffee lid, and crema in one shape.</p>
+    </section>
+
+    <section>
+      <h2>Two directions I killed (and why)</h2>
+      <div class="cols">
+        <div class="card">
+          <span class="tag">Direction A · Rejected</span>
+          <h4>"Bean There" — bright &amp; illustrated</h4>
+          <p>Pastel palette, wavy retro type, smiling bean mascot. The obvious "fun coffee brand" move.</p>
+          <div class="why"><b>Why it died</b><span>Looked like every D2C coffee brand on Instagram. Zero scarcity — scarcity needs night, and this palette was a sunny café. Premium and playful don't survive pastels.</span></div>
+        </div>
+        <div class="card">
+          <span class="tag">Direction B · Rejected</span>
+          <h4>"Roast Index" — technical &amp; swiss</h4>
+          <p>Monospace data-viz, tasting-note charts, grid everything. Very clever, very cold.</p>
+          <div class="why"><b>Why it died</b><span>Appealed to coffee nerds but excluded the casual 1 a.m. buyer. Emotion was missing — and emotional recall is what makes an ad work at midnight when nobody's comparison-shopping.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>The winning direction: "Midnight Roast"</h2>
+      <div class="final">
+        <h4>Dark, warm, and scarce — the night sky does the selling.</h4>
+        <p>Near-black grounds the premium feel; crema-tan and burnt orange keep it warm, not gloomy. One repeated shape — the crema moon — makes 7 formats read as one brand. Scarcity is built into the copy everywhere: <b>500 bags, then it's gone.</b></p>
+        <div class="swatches">
+          <div class="sw" style="background:#16130f"><span>INK · 16130F</span></div>
+          <div class="sw" style="background:#f4ead8;color:#16130f"><span style="color:#16130f">CREMA · F4EAD8</span></div>
+          <div class="sw" style="background:#d9b98c"><span style="color:#16130f">LATTE · D9B98C</span></div>
+          <div class="sw" style="background:#c96f3b"><span>BURNT · C96F3B</span></div>
+        </div>
+        <h3>Type &amp; motif</h3>
+        <p style="font-family:'Fraunces',Georgia,serif;font-size:26px;color:var(--crema)">Fraunces — for the voice. <i>Italic serif for the punchline.</i></p>
+        <p style="margin-top:8px">Inter — for everything the voice needs to be legible: eyebrows, offers, CTAs. One shape rules the system: <b style="color:var(--crema)">the crema moon</b>.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Final outputs — one campaign, four formats</h2>
+      <p>Every piece keeps the same headline language, the moon, and the offer. Format changes the layout, never the brand.</p>
+      <div class="grid-outputs">
+        <figure class="shot">
+          <div class="fit" style="width:220px;height:220px">
+            <iframe src="carousel/slide-1.html" style="width:1080px;height:1080px;border:0;transform:scale(.2037);transform-origin:top left" title="Carousel hero"></iframe>
+          </div>
+          <figcaption>IG carousel · hero</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="fit" style="width:220px;height:220px">
+            <iframe src="square/post.html" style="width:1080px;height:1080px;border:0;transform:scale(.2037);transform-origin:top left" title="Square post"></iframe>
+          </div>
+          <figcaption>IG static post</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="fit" style="width:124px;height:220px;margin:0 auto">
+            <iframe src="story/story.html" style="width:1080px;height:1920px;border:0;transform:scale(.1148);transform-origin:top left" title="Story"></iframe>
+          </div>
+          <figcaption>IG story · 1080×1920</figcaption>
+        </figure>
+      </div>
+      <div class="grid-outputs" style="grid-template-columns:repeat(2,1fr)">
+        <figure class="shot">
+          <div class="fit" style="width:220px;height:183px">
+            <iframe src="banners/300x250.html" style="width:300px;height:250px;border:0;transform:scale(.7333);transform-origin:top left" title="300x250"></iframe>
+          </div>
+          <figcaption>Display · 300×250</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="fit" style="width:480px;height:183px">
+            <iframe src="banners/728x90.html" style="width:728px;height:90px;border:0;transform:scale(.66);transform-origin:top left;margin-top:62px" title="728x90"></iframe>
+          </div>
+          <figcaption>Display · 728×90</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>What I'd carry into the next brief</h2>
+      <ul class="points">
+        <li><b>One metaphor beats ten ideas.</b> The crema moon made every resize decision obvious — if it's not the moon's moment, the format doesn't need it.</li>
+        <li><b>Scarcity is a design constraint.</b> "500 bags" shaped the palette (night), the type (urgent italics), and the CTA (Shop the drop) — not just the copy.</li>
+        <li><b>Design for the smallest unit first.</b> The 160×600 forced the message down to five words; if it works there, it works everywhere.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

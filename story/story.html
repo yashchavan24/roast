@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../brand.css">
+<style>
+  .frame { --w: 1080px; --h: 1920px; }
+
+  /* progress bars — story chrome */
+  .bars { position: absolute; top: 54px; left: 56px; right: 56px; display: flex; gap: 10px; }
+  .bars span { height: 6px; border-radius: 6px; background: rgba(244,234,216,.28); flex: 1; }
+  .bars span.on { background: var(--crema); }
+
+  .logo { position: absolute; top: 110px; left: 72px; font-size: 38px; }
+  .moon { width: 480px; height: 480px; right: -160px; top: 150px; }
+  .eyebrow { position: absolute; top: 660px; left: 72px; font-size: 26px; }
+  .display { position: absolute; top: 740px; left: 72px; font-size: 140px; }
+  .sub {
+    position: absolute; left: 72px; top: 1210px;
+    font-size: 30px; line-height: 1.55; color: var(--latte); max-width: 640px;
+  }
+
+  /* sticker-style countdown chip */
+  .sticker {
+    position: absolute; top: 1460px; left: 72px;
+    background: var(--espresso); border: 2px solid var(--latte);
+    border-radius: 20px; padding: 30px 38px;
+    display: flex; align-items: center; gap: 26px;
+    transform: rotate(-2deg);
+  }
+  .sticker .clock {
+    font-family: var(--display); font-size: 64px; font-weight: 700; color: var(--crema);
+  }
+  .sticker .label {
+    font-size: 20px; letter-spacing: .3em; text-transform: uppercase;
+    color: var(--latte); font-weight: 600; line-height: 1.7;
+  }
+  .sticker .label b { display: block; color: var(--burnt); font-size: 26px; letter-spacing: .22em; }
+
+  .cta { position: absolute; left: 72px; top: 1700px; font-size: 28px; padding: 30px 52px; }
+  .tap {
+    position: absolute; right: 84px; top: 1712px; font-size: 22px;
+    letter-spacing: .3em; text-transform: uppercase; color: var(--latte); font-weight: 600;
+  }
+  .handle { right: 72px; bottom: 56px; font-size: 20px; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="bars"><span class="on"></span><span class="on"></span><span class="on"></span><span></span></div>
+    <div class="stars"></div>
+    <div class="moon"></div>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+
+    <div class="logo">Roast Theory<span class="reg">®</span></div>
+    <div class="eyebrow">Midnight Roast — Live Now</div>
+    <h1 class="display">500 bags.<br>Then <span class="serif-i accent">gone.</span></h1>
+    <p class="sub">Batch Nº 07 drops at midnight IST. Swipe up when the clock hits zero — late risers get Batch Nº 08, which is a different coffee.</p>
+
+    <div class="sticker">
+      <div class="clock">00:47:12</div>
+      <div class="label">Countdown<b>Until the drop</b></div>
+    </div>
+
+    <div class="cta">Tap to shop</div>
+    <div class="tap">↑ Swipe up</div>
+    <div class="handle">@roasttheory</div>
+  </div>
+</body>
+</html>

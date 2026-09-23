@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../brand.css">
+<style>
+  .frame { --w: 1080px; --h: 1080px; }
+  .logo { position: absolute; top: 64px; left: 72px; font-size: 34px; }
+  .handle { right: 72px; bottom: 66px; font-size: 20px; }
+  .eyebrow { position: absolute; top: 250px; left: 72px; font-size: 24px; }
+  .display {
+    position: absolute; top: 320px; left: 72px;
+    font-size: 108px; max-width: 620px;
+  }
+  .moon { width: 420px; height: 420px; right: 60px; top: 150px; }
+  .notes { position: absolute; left: 72px; top: 700px; display: flex; flex-direction: column; gap: 34px; }
+  .note { display: flex; align-items: center; gap: 24px; }
+  .note i { width: 40px; height: 40px; border-radius: 50%; flex: none; box-shadow: 0 0 0 2px rgba(217,185,140,.35); }
+  .note b {
+    font-family: var(--body); font-weight: 700; letter-spacing: .34em;
+    text-transform: uppercase; font-size: 24px; color: var(--crema);
+  }
+  .footer-line {
+    position: absolute; left: 72px; bottom: 160px;
+    font-size: 25px; line-height: 1.5; color: var(--latte); max-width: 700px;
+  }
+  .dots { position: absolute; left: 72px; bottom: 70px; }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="stars"></div>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+
+    <div class="logo">Roast Theory<span class="reg">®</span></div>
+    <div class="eyebrow">The Pour</div>
+    <h1 class="display">Smooth. Dark. <span class="serif-i">Sugar-free.</span></h1>
+
+    <div class="moon"></div>
+
+    <div class="notes">
+      <div class="note"><i style="background:#f7efdd"></i><b>Smooth</b></div>
+      <div class="note"><i style="background:#c96f3b"></i><b>Smoky</b></div>
+      <div class="note"><i style="background:#5d4632"></i><b>No sugar</b></div>
+    </div>
+
+    <p class="footer-line">Cocoa, burnt caramel, and the last email you'll send tonight.</p>
+    <div class="dots"><span></span><span class="on"></span><span></span><span></span></div>
+    <div class="handle">@roasttheory</div>
+  </div>
+</body>
+</html>

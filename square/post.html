@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../brand.css">
+<style>
+  .frame { --w: 1080px; --h: 1080px; }
+  .logo { position: absolute; top: 64px; left: 72px; font-size: 34px; z-index: 3; }
+  .handle { right: 72px; bottom: 66px; font-size: 20px; z-index: 3; color: var(--ink); }
+
+  .moon { width: 640px; height: 640px; right: -160px; top: 420px; z-index: 1; }
+
+  .eyebrow { position: absolute; top: 150px; left: 72px; font-size: 24px; z-index: 3; }
+
+  /* headline chips */
+  .display {
+    position: absolute; top: 250px; left: 66px;
+    font-size: 210px; line-height: .92; z-index: 2;
+  }
+  .chip { display: inline-block; padding: 0 30px 10px; }
+  .chip.dark  { background: var(--espresso); color: var(--crema); }
+  .chip.burnt { background: var(--burnt); color: var(--ink); margin-left: 110px; }
+
+  /* punchline rides across the moon as an outline */
+  .punch {
+    position: absolute; top: 680px; left: 66px;
+    font-family: var(--display); font-style: italic; font-weight: 500;
+    font-size: 88px; line-height: 1; color: transparent;
+    -webkit-text-stroke: 2.5px var(--crema); z-index: 2; letter-spacing: -.01em;
+  }
+
+  .badge {
+    position: absolute; top: 140px; right: 100px;
+    width: 200px; height: 200px; font-size: 14px; gap: 6px;
+    transform: rotate(12deg); z-index: 3;
+    background: rgba(13,11,8,.25);
+  }
+  .sub {
+    position: absolute; left: 72px; bottom: 196px;
+    font-size: 26px; line-height: 1.5; color: var(--latte); max-width: 380px; z-index: 3;
+  }
+  .footer-line {
+    position: absolute; left: 72px; bottom: 80px;
+    font-size: 22px; letter-spacing: .28em; text-transform: uppercase;
+    color: var(--burnt); font-weight: 700; z-index: 3;
+  }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="stars"></div>
+    <div class="moon"></div>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+
+    <div class="logo">Roast Theory<span class="reg">®</span></div>
+    <div class="eyebrow">Midnight Roast · Batch Nº 07</div>
+
+    <h1 class="display">
+      <span class="chip dark">Stay</span><br>
+      <span class="chip burnt">up.</span>
+    </h1>
+    <div class="punch">Well, sort of.</div>
+
+    <div class="badge"><span>Limited</span><span class="big">500</span><span>Bags</span></div>
+    <p class="sub">A limited-batch dark roast for the 1 a.m. crowd. Zero apologies.</p>
+    <div class="footer-line">Drops tonight → roasttheory.coffee</div>
+    <div class="handle">@roasttheory</div>
+  </div>
+</body>
+</html>

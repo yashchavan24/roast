@@ -1,0 +1,199 @@
+/* ==========================================================================
+   ROAST THEORY — brand system for the campaign portfolio
+   One source of truth: every creative imports this.
+   Campaign: "Midnight Roast" — limited-batch dark roast for the 1 a.m. crowd.
+   ========================================================================== */
+
+:root {
+  /* Brand palette */
+  --ink: #16130f;        /* near-black coffee — primary bg */
+  --espresso: #2a211a;   /* raised dark surface */
+  --night: #0d0b08;      /* deepest background */
+  --crema: #f4ead8;      /* warm cream — primary text */
+  --latte: #d9b98c;      /* latte tan — secondary text, lines */
+  --burnt: #c96f3b;      /* burnt orange — CTA accent */
+  --hazelnut: #8a6a4f;   /* mid brown — muted details */
+
+  /* Type */
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { background: var(--night); }
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+/* --- Canvas: each creative sets --w / --h on .frame ------------------- */
+.frame {
+  position: relative;
+  width: var(--w, 1080px);
+  height: var(--h, 1080px);
+  background: var(--ink);
+  color: var(--crema);
+  font-family: var(--body);
+  overflow: hidden;
+}
+
+/* --- Text helpers ------------------------------------------------------ */
+.eyebrow {
+  font-family: var(--body);
+  font-weight: 600;
+  letter-spacing: .42em;
+  text-transform: uppercase;
+  color: var(--latte);
+}
+
+.display {
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: .96;
+  letter-spacing: -.02em;
+}
+
+.serif-i { font-style: italic; font-weight: 500; }
+.accent  { color: var(--burnt); }
+
+/* --- Brand motifs ------------------------------------------------------ */
+
+/* Moon: full moon / coffee-lid / crema circle — the campaign hero shape */
+.moon {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%,
+      #fff8ea 0%, var(--crema) 45%, #dfc594 100%);
+  box-shadow: 0 0 140px rgba(244, 234, 216, .22);
+}
+
+/* Starfield — pure CSS, no images */
+.stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(3px 3px at 12% 18%, rgba(244,234,216,.95) 50%, transparent 52%),
+    radial-gradient(2px 2px at 34% 7%,  rgba(244,234,216,.7)  50%, transparent 52%),
+    radial-gradient(2px 2px at 58% 14%, rgba(244,234,216,.85) 50%, transparent 52%),
+    radial-gradient(2.5px 2.5px at 81% 9%, rgba(244,234,216,.9) 50%, transparent 52%),
+    radial-gradient(1.8px 1.8px at 92% 26%, rgba(244,234,216,.6) 50%, transparent 52%),
+    radial-gradient(2px 2px at 22% 34%, rgba(244,234,216,.55) 50%, transparent 52%),
+    radial-gradient(1.8px 1.8px at 70% 30%, rgba(244,234,216,.6) 50%, transparent 52%),
+    radial-gradient(2.4px 2.4px at 46% 4%, rgba(244,234,216,.8) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 8% 6%,  rgba(244,234,216,.5) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 96% 44%, rgba(244,234,216,.5) 50%, transparent 52%);
+}
+
+/* Top-view cup: dark rim, crema inside, simple CSS swirl */
+.cup-top {
+  position: absolute;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 47% 40%, rgba(22,19,15,.18) 0 9%, transparent 10%),
+    radial-gradient(circle at 58% 62%, rgba(22,19,15,.14) 0 12%, transparent 13%),
+    radial-gradient(circle at 50% 50%,
+      #f7efdd 0 54%,
+      #e3c795 55% 60%,
+      #b98f5c 61% 64%,
+      #5d4632 65% 76%,
+      var(--espresso) 77%);
+  box-shadow: 0 0 0 10px rgba(13, 11, 8, .55), 0 40px 80px rgba(0,0,0,.5);
+}
+
+/* Circular stamp badge */
+.badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 2px solid var(--latte);
+  border-radius: 50%;
+  color: var(--latte);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-weight: 600;
+}
+
+.badge .big {
+  font-family: var(--display);
+  font-size: 2.1em;
+  letter-spacing: .02em;
+  color: var(--crema);
+}
+
+/* CTA pill */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--burnt);
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Coupon chip */
+.coupon {
+  display: inline-block;
+  border: 2px dashed var(--latte);
+  border-radius: 10px;
+  color: var(--latte);
+  font-weight: 700;
+  letter-spacing: .22em;
+  padding: .5em 1em;
+}
+
+/* --- Texture + light ---------------------------------------------------- */
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .08;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/></svg>");
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 120% at 50% 40%,
+    transparent 55%, rgba(13, 11, 8, .55) 100%);
+}
+
+/* --- Chrome shared by every creative ------------------------------------ */
+.logo {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--crema);
+  white-space: nowrap;
+}
+
+.logo .reg { font-size: .38em; vertical-align: super; letter-spacing: 0; }
+
+.handle {
+  position: absolute;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: var(--latte);
+  font-weight: 600;
+}
+
+/* Card slide dots (carousel only) */
+.dots { display: flex; gap: 14px; }
+.dots span {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid var(--latte);
+}
+.dots span.on { background: var(--latte); }
