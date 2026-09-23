@@ -2,62 +2,165 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Roast Theory — Campaign Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roast Theory® × Loop Camp — Campaign Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
-  body { margin: 0; background: #0a0908; color: #f4ead8; font-family: Georgia, serif; }
-  header { padding: 56px 48px 24px; }
-  h1 { margin: 0; font-size: 34px; }
-  .eyebrow { font-family: Arial, sans-serif; color: #c96f3b; letter-spacing: .3em; text-transform: uppercase; font-size: 12px; font-weight: 700; margin-bottom: 14px; }
-  .sub { color: #8a6a4f; font-family: Arial, sans-serif; font-size: 15px; max-width: 720px; line-height: 1.7; }
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 24px 48px 56px; }
-  a.card { transition: transform .15s ease; }
-  a.card {
-    display: block; border: 1px solid #2a211a; padding: 26px; text-decoration: none;
-    color: #f4ead8; background: #16130f; min-height: 150px;
+  /* =========================================================================
+     SPLIT PORTFOLIO — two brands, two registers, one page.
+     Left  · Roast Theory: 1 a.m. dark, serif, ember hairlines, editorial list.
+     Right · Loop Camp:    paper bright, Space Grotesk, chunky sticker grid.
+     The seam between them is a candy pixel-stripe — the "range" made visible.
+     ========================================================================= */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { display: flex; min-height: 100vh; }
+
+  a { -webkit-tap-highlight-color: transparent; }
+  a:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
+
+  /* --- shared panel scaffolding ------------------------------------------ */
+  .panel { flex: 1 1 0; min-width: 0; min-height: 100vh; padding: 64px 52px 72px; }
+  .panel .eyebrow { font-family: Arial, sans-serif; font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: .3em; margin-bottom: 14px; }
+  .panel h1 { font-size: 34px; line-height: 1.1; margin-bottom: 12px; }
+  .panel .sub { font-family: Arial, sans-serif; font-size: 14px; line-height: 1.7; max-width: 480px; margin-bottom: 40px; }
+  .panel h2 { font-size: 19px; }
+  .panel .arrow { display: inline-block; transition: transform .15s ease; }
+  a:hover .arrow { transform: translateX(5px); }
+
+  /* --- LEFT · Roast Theory (dark editorial) -------------------------------- */
+  .roast { background: #0a0908; color: #f4ead8; font-family: Georgia, serif; }
+  .roast .eyebrow { color: #c96f3b; }
+  .roast .sub { color: #8a6a4f; }
+  /* crema-moon motif */
+  .roast .moon { width: 44px; height: 44px; border-radius: 50%; background: radial-gradient(circle at 38% 32%, #f4ead8 0 42%, #c96f3b 43% 100%); margin-bottom: 22px; }
+  .roast ul { list-style: none; border-top: 1px solid #2a211a; }
+  .roast li { border-bottom: 1px solid #2a211a; }
+  .roast a { display: grid; grid-template-columns: 92px 1fr; gap: 6px 18px; padding: 20px 4px; text-decoration: none; color: inherit; }
+  .roast .n { font-family: Arial, sans-serif; font-size: 10px; letter-spacing: .3em; color: #c96f3b; text-transform: uppercase; padding-top: 7px; white-space: nowrap; }
+  .roast h2 { font-weight: normal; transition: color .15s ease; }
+  .roast a:hover h2 { color: #e8a06a; }
+  .roast p { grid-column: 2; font-family: Arial, sans-serif; font-size: 12.5px; line-height: 1.6; color: #8a6a4f; }
+
+  /* --- SEAM · candy pixel stripe ------------------------------------------ */
+  .seam { flex: none; width: 18px; background: repeating-linear-gradient(180deg,
+    #b7f04c 0 26px, #3edbb2 26px 52px, #ffd23e 52px 78px, #6c3ce0 78px 104px); }
+
+  /* --- RIGHT · Loop Camp (bright sticker grid) ------------------------------ */
+  .camp { background: #fffdf7; color: #1e1a33; font-family: "Space Grotesk", "Segoe UI", Verdana, sans-serif; }
+  .camp .eyebrow { color: #6c3ce0; }
+  .camp .sub { color: #6b6788; font-family: Arial, sans-serif; }
+  .camp h1 em { font-style: normal; color: #6c3ce0; }
+  .camp .mark { display: inline-grid; grid-template-columns: repeat(2, 1fr); gap: 3px; margin-bottom: 20px; }
+  .camp .mark i { width: 11px; height: 11px; border-radius: 3px; background: #6c3ce0; }
+  .camp .mark i:nth-child(2) { background: #b7f04c; }
+  .camp .mark i:nth-child(3) { background: #ffd23e; }
+  .camp .mark i:nth-child(4) { background: #3edbb2; }
+  .camp ul { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .camp a { display: block; height: 100%; text-decoration: none; color: inherit;
+    background: #fff; border: 3px solid #1e1a33; border-radius: 16px; padding: 18px;
+    box-shadow: 6px 6px 0 #d9d4ef; transition: transform .12s ease, box-shadow .12s ease; }
+  .camp a:hover { transform: translate(-2px, -2px); box-shadow: 9px 9px 0 #b7f04c; }
+  .camp .n { display: block; font-family: Arial, sans-serif; font-size: 9.5px; font-weight: 700; letter-spacing: .28em; text-transform: uppercase; color: #6c3ce0; margin-bottom: 10px; }
+  .camp h2 { font-size: 15.5px; letter-spacing: -.01em; margin-bottom: 7px; }
+  .camp p { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.55; color: #6b6788; }
+  .camp li.case { grid-column: span 2; }
+
+  /* --- stacked on narrow screens ------------------------------------------- */
+  @media (max-width: 940px) {
+    body { flex-direction: column; }
+    .panel { min-height: auto; padding: 56px 28px 56px; }
+    .seam { width: auto; height: 18px; background: repeating-linear-gradient(90deg,
+      #b7f04c 0 26px, #3edbb2 26px 52px, #ffd23e 52px 78px, #6c3ce0 78px 104px); }
+    .camp ul { grid-template-columns: 1fr; }
+    .camp li.case { grid-column: auto; }
+    .roast a { grid-template-columns: 76px 1fr; }
   }
-  a.card:hover { border-color: #c96f3b; }
-  .card h2 { margin: 0 0 8px; font-size: 19px; }
-  .card p { margin: 0; color: #8a6a4f; font-family: Arial, sans-serif; font-size: 13px; line-height: 1.6; }
-  .card .n { color: #c96f3b; font-family: Arial, sans-serif; font-size: 11px; letter-spacing: .3em; display: block; margin-bottom: 14px; }
 </style>
 </head>
 <body>
-  <header>
-    <div class="eyebrow">Fictional D2C coffee brand · one campaign · four formats</div>
+
+  <!-- ============ HALF 1 · ROAST THEORY — after midnight ============ -->
+  <section class="panel roast">
+    <div class="moon" aria-hidden="true"></div>
+    <div class="eyebrow">Fictional D2C coffee · one campaign · four formats</div>
     <h1>Roast Theory® — "Midnight Roast" drop</h1>
-    <p class="sub">A limited-batch dark roast for the 1 a.m. crowd. One campaign idea — crema-moon motif, scarcity hook, NIGHTOWL offer — carried across social and display so every format feels like the same brand.</p>
-  </header>
-  <div class="grid">
-    <a class="card" href="carousel/index.html">
-      <span class="n">Project 1</span>
-      <h2>Instagram Carousel →</h2>
-      <p>4 slides · 1080×1080 · hook → product → trust → CTA narrative arc</p>
-    </a>
-    <a class="card" href="story/story.html">
-      <span class="n">Project 1b</span>
-      <h2>Instagram Story →</h2>
-      <p>1080×1920 · full-bleed vertical with countdown sticker &amp; swipe-up</p>
-    </a>
-    <a class="card" href="square/post.html">
-      <span class="n">Project 1c</span>
-      <h2>Static Square Post →</h2>
-      <p>1080×1080 · typographic poster treatment of the campaign hook</p>
-    </a>
-    <a class="card" href="banners/index.html">
-      <span class="n">Project 2</span>
-      <h2>Display Banner Set →</h2>
-      <p>300×250 · 728×90 · 160×600 — one concept resized across IAB units</p>
-    </a>
-    <a class="card" href="case-study.html">
-      <span class="n">Project 3</span>
-      <h2>Brief-to-Output Case Study →</h2>
-      <p>The brief, two rejected directions, and why "Midnight Roast" won</p>
-    </a>
-    <a class="card" href="loop-camp/index.html" style="border-color:#6c3ce0">
-      <span class="n" style="color:#6c3ce0">Project 4 · New</span>
-      <h2>Loop Camp — Kids Coding Camp →</h2>
-      <p>Bright, playful identity + campaign in the opposite register — proving range, not one aesthetic</p>
-    </a>
-  </div>
+    <p class="sub">A limited-batch dark roast for the 1 a.m. crowd. Crema-moon motif, scarcity hook, NIGHTOWL offer — one idea carried across every format.</p>
+    <ul>
+      <li><a href="carousel/index.html">
+        <span class="n">Project 1</span>
+        <h2>Instagram Carousel <span class="arrow">→</span></h2>
+        <p>4 slides · 1080×1080 · hook → product → trust → CTA narrative arc</p>
+      </a></li>
+      <li><a href="story/story.html">
+        <span class="n">Project 1b</span>
+        <h2>Instagram Story <span class="arrow">→</span></h2>
+        <p>1080×1920 · full-bleed vertical with countdown sticker &amp; swipe-up</p>
+      </a></li>
+      <li><a href="square/post.html">
+        <span class="n">Project 1c</span>
+        <h2>Static Square Post <span class="arrow">→</span></h2>
+        <p>1080×1080 · typographic poster treatment of the campaign hook</p>
+      </a></li>
+      <li><a href="banners/index.html">
+        <span class="n">Project 2</span>
+        <h2>Display Banner Set <span class="arrow">→</span></h2>
+        <p>300×250 · 728×90 · 160×600 — one concept resized across IAB units</p>
+      </a></li>
+      <li><a href="case-study.html">
+        <span class="n">Project 3</span>
+        <h2>Brief-to-Output Case Study <span class="arrow">→</span></h2>
+        <p>The brief, two rejected directions, and why "Midnight Roast" won</p>
+      </a></li>
+    </ul>
+  </section>
+
+  <div class="seam" aria-hidden="true"></div>
+
+  <!-- ============ HALF 2 · LOOP CAMP — summer of code ============ -->
+  <section class="panel camp">
+    <span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <div class="eyebrow">Fictional kids coding camp · ages 8–14</div>
+    <h1>Loop Camp<em>.</em> — Summer of Code</h1>
+    <p class="sub">The deliberate counterweight to Roast Theory: bright, geometric, dual-audience (parent + kid). Same brief-to-output discipline — opposite register. Proof of range, not one aesthetic.</p>
+    <ul>
+      <li><a href="loop-camp/identity.html">
+        <span class="n">Deliverable 1</span>
+        <h2>Brand Identity <span class="arrow">→</span></h2>
+        <p>Logo construction · palette roles · Space Grotesk type system · voice rules</p>
+      </a></li>
+      <li><a href="loop-camp/post-hero.html">
+        <span class="n">Deliverable 2a</span>
+        <h2>Hero IG Post <span class="arrow">→</span></h2>
+        <p>1080×1080 · pixel deco · highlighter headline · sticker scarcity</p>
+      </a></li>
+      <li><a href="loop-camp/story.html">
+        <span class="n">Deliverable 2b</span>
+        <h2>Instagram Story <span class="arrow">→</span></h2>
+        <p>1080×1920 · inverse purple · code window · parent + kid dual voice</p>
+      </a></li>
+      <li><a href="loop-camp/300x250.html">
+        <span class="n">Deliverable 3a</span>
+        <h2>Display 300×250 <span class="arrow">→</span></h2>
+        <p>Medium rectangle · 4-word headline · full-width CTA</p>
+      </a></li>
+      <li><a href="loop-camp/728x90.html">
+        <span class="n">Deliverable 3b</span>
+        <h2>Display 728×90 <span class="arrow">→</span></h2>
+        <p>Leaderboard · one-line hierarchy with info chips</p>
+      </a></li>
+      <li><a href="loop-camp/160x600.html">
+        <span class="n">Deliverable 3c</span>
+        <h2>Display 160×600 <span class="arrow">→</span></h2>
+        <p>Skyscraper · vertical reading order · sticker moment</p>
+      </a></li>
+      <li class="case"><a href="loop-camp/case-study.html">
+        <span class="n">Deliverable 4</span>
+        <h2>Brief-to-Output Case Study <span class="arrow">→</span></h2>
+        <p>The dual-audience tension, the killed mascot direction, the fixed color-role system — and what transferred from Project 1</p>
+      </a></li>
+    </ul>
+  </section>
+
 </body>
 </html>

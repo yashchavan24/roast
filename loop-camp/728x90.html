@@ -6,29 +6,39 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="brand.css">
 <style>
-  .frame { --w: 728px; --h: 90px; }
-  .logo { position: absolute; top: 50%; left: 24px; transform: translateY(-50%); font-size: 16px; }
-  .eyebrow { position: absolute; top: 19px; left: 170px; font-size: 8px; }
-  .display { position: absolute; top: 54%; left: 170px; transform: translateY(-50%); font-size: 26px; white-space: nowrap; }
-  .chip.a { position: absolute; left: 424px; top: 50%; transform: translateY(-50%); font-size: 10.5px; padding: 9px 16px; background: var(--cloud); }
-  .chip.b { position: absolute; left: 560px; top: 50%; transform: translateY(-50%); font-size: 10.5px; padding: 9px 16px; background: var(--sunshine); }
-  .px.a { width: 24px; height: 24px; left: 408px; top: 33px;
-    grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 3px; }
-  .px.a i { border-radius: 2px; }
-  .px.a i:nth-child(1) { background: var(--sunshine); }
-  .px.a i:nth-child(2) { background: var(--mint); }
-  .px.a i:nth-child(4) { background: var(--lime); }
-  .btn { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 11px; padding: 12px 20px; box-shadow: 0 4px 0 var(--grape-dark); }
+  /* ===== 728x90 leaderboard — flex-packed, not pixel-pinned =================
+     Old bug: every element sat on a hardcoded `left:` offset tuned to
+     fallback fonts. When the real webfonts load (~15% wider), the yellow
+     "Free trial" chip slid under the CTA pinned at right:18px. Now the row
+     packs with flexbox: elements push each other instead of colliding and
+     margin-left:auto absorbs the slack, so no font metric can overlap them. */
+  .frame { --w: 728px; --h: 90px; display: flex; }
+  .bar   { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; padding: 0 20px; }
+  .logo  { font-size: 14px; flex: none; }
+  .copy  { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+  .eyebrow { font-size: 8px; white-space: nowrap; }
+  .display { font-size: 20px; white-space: nowrap; }
+  .meta  { flex: none; margin-left: auto; display: flex; align-items: center; gap: 9px; }
+  .chip  { font-size: 9.5px; padding: 8px 12px; letter-spacing: .1em; }
+  .chip.a { background: var(--cloud); }
+  .chip.b { background: var(--sunshine); }
+  .btn   { font-size: 10px; padding: 11px 16px; box-shadow: 0 4px 0 var(--grape-dark); }
 </style>
 </head>
 <body>
   <div class="frame">
-    <div class="logo"><span class="mark"><i></i><i></i><i></i><i></i></span>Loop Camp</div>
-    <div class="eyebrow">Summer of Code · Ages 8–14</div>
-    <h1 class="display">They build <span class="accent">the game.</span></h1>
-    <div class="chip a">Jun 2 – Jul 11</div>
-    <div class="chip b">Free trial</div>
-    <div class="btn">Save a seat →</div>
+    <div class="bar">
+      <div class="logo"><span class="mark"><i></i><i></i><i></i><i></i></span>Loop Camp</div>
+      <div class="copy">
+        <div class="eyebrow">Summer of Code · Ages 8–14</div>
+        <h1 class="display">They build <span class="accent">the game.</span></h1>
+      </div>
+      <div class="meta">
+        <div class="chip a">Jun 2 – Jul 11</div>
+        <div class="chip b">Free trial</div>
+        <div class="btn">Save a seat →</div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
